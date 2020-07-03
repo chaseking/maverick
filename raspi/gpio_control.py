@@ -9,6 +9,7 @@ def setup():
     GPIO.setmode(GPIO.BOARD);
     
     for pin in OUTLET_TO_PIN:
+        print(f"Setting up {pin}")
         GPIO.setup(pin, GPIO.OUT)
 
 def get_outlet_state(outlet):
