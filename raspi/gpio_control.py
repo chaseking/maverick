@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
-OUTLET_TO_PIN = [7, 11, 12, 13, 15, 16, 18, 22, 25]
+OUTLET_TO_PIN = [7, 11, 12, 13, 15, 16, 18, 22]
 
 def setup():
     # So the parameters to GPIO methods correspond to Raspberry Pi pins
