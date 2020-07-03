@@ -1,2 +1,2 @@
-# maverick
+# Maverick
 Home automation
