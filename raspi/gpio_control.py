@@ -22,6 +22,3 @@ def toggle_outlet_state(outlet):
     new_state = not get_outlet_state(outlet)
     set_outlet_state(outlet, new_state)
     return new_state
-
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(7)
