@@ -1,0 +1,16 @@
+{
+    "homeId": "20oak",
+    "homeName": "20 Oak Lane",
+    "items": [
+        {
+            "name": "Projector Screen LED",
+            "id": "proj_screen_led",
+            "type": "led_strip",
+            "data": {
+                "color": [ 52, 172, 224 ],
+                "on": false,
+                "transition": "wipe"
+            }
+        }
+    ]
+}
