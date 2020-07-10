@@ -132,7 +132,7 @@ dmypy.json
 __pycache__/
 
 # dependencies
-/node_modules
+node_modules/
 /.pnp
 .pnp.js
 
@@ -143,6 +143,7 @@ __pycache__/
 /build
 
 # misc
+.vscode/
 .DS_Store
 .env.local
 .env.development.local
