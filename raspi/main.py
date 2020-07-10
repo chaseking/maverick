@@ -13,8 +13,8 @@ async def root():
 
 @app.get("/outlet/{outlet}/{state}")
 async def set_outlet_state(outlet: int, state: str):
-    print(outlet, state)
     curr_state = gpio_control.get_outlet_state(outlet)
+    state = state.lower()
 
     if state == "toggle":
         new_state = not curr_state

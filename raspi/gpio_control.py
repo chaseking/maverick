@@ -14,10 +14,11 @@ def setup():
 
 def get_outlet_state(outlet):
     # TODO error handling (e.g. outlet not valid)
-    return GPIO.input(OUTLET_TO_PIN[outlet])
+    # Negate because True is off and False is on
+    return not bool(GPIO.input(OUTLET_TO_PIN[outlet]))
 
 def set_outlet_state(outlet, output):
-    GPIO.output(OUTLET_TO_PIN[outlet], output)
+    GPIO.output(OUTLET_TO_PIN[outlet], not output)
 
 def toggle_outlet_state(outlet):
     new_state = not get_outlet_state(outlet)
