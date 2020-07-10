@@ -12,7 +12,8 @@ async def root():
     }
 
 @app.get("/outlet/{outlet}/{state}")
-async def toggle(outlet: int, state: str):
+async def set_outlet_state(outlet: int, state: str):
+    print(outlet, state)
     curr_state = gpio_control.get_outlet_state(outlet)
 
     if state == "toggle":
@@ -34,7 +35,8 @@ async def toggle(outlet: int, state: str):
     return {
         "success": True,
         "outlet": outlet,
-        "new_state": new_state
+        "oldState": curr_state,
+        "newState": new_state
     }
 
 # @app.post("/outlet/{outlet}")
